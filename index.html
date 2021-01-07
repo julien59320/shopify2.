@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reVision</title>
+	<link rel="stylesheet" type="text/css" href="/shopify/style12.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+	<div class="content with-embed">
+		<section class="loading">
+			<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+		</section>
+		<section class="revision">
+			<img class="image before with-embed" src="/shopify/shutterstock_1381949693.png">
+			<img class="image after with-embed" src="/shopify/shutterstock_1381949693%20(1).png">
+			<div class="line"></div>
+		</section>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="/shopify/jquery-ui.min.js"></script>
+	<script src="/shopify/jquery.ui.touch-punch.min.js"></script>
+	<script src="/shopify/main.js"></script>
+	<script src="https://use.typekit.net/ntk7cio.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<script>
+		$loading.show();
+		$before.on('load', function() {
+			setTimeout(function() { 
+				$loading.hide();
+				$revision.show();
+				responsiveImage();
+			}, 300);
+			$before.css('clip-path', 'inset(0 ' + percent +'% 0 0)').css('-webkit-clip-path', 'inset(0 ' + percent +'% 0 0)');
+		});
+		$before.trigger('load');
+	</script>
+	</body>
+</html>
